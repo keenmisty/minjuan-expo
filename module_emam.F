@@ -8,7 +8,7 @@ module emam_calculate
 
 contains
 
-subroutine cshg_calculate
+subroutine cshg_calculate(cshg,dtot,ks,t,zs,bd)
 
   implicit none
   real :: cshg      ! soil Hg concentration (mg/kg)
