@@ -11,13 +11,20 @@ contains
 subroutine cshg_calculate
 
   implicit none
-  real :: cshg      ! soil Hg concentration
-  real :: dtot
-  real :: ks
-  real :: t
-  real :: zs
-  real :: bd
+  real :: cshg      ! soil Hg concentration (mg/kg)
+  real :: dtot      ! yearly dry deposition (ug/m2/year)
+  real :: ks        ! soil Hg loss constant (year-1)
+  real :: t         ! study period (year)
+  real :: zs        ! soil mixing zone depth (cm)
+  real :: bd        ! soil bulk density (g soil/cm3 soil)
 
+  real :: online 
+  real :: underline
+
+  online    =100*dtot*(1.0-exp(-ks*t))
+  underline =zs*bd*ks
+
+  cshg      =online/underline
 
 end subroutine cshg_calculate
 
