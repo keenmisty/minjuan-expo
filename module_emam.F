@@ -28,4 +28,10 @@ subroutine cshg_calculate(cshg,dtot,ks,t,zs,bd)
 
 end subroutine cshg_calculate
 
+subroutine cwtot_calculate
+
+  implicit none
+  real :: cwtot     ! Total water body Hg concentration (mg/L)
+end subroutine cwtot_calculate
+
 end module emam_calculate
