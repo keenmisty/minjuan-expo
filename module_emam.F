@@ -44,15 +44,15 @@ subroutine cwtot_calculate(cwtot,ldep,li,lr,le,vfx,fwc,kwt,aw,dz)
 
 ! implicit none
   real :: cwtot     ! Total water body Hg concentration (mg/L)
-  real :: ldep      !  
-  real :: li        !
-  real :: lr        !
-  real :: le        !
-  real :: vfx       !
-  real :: fwc       !
-  real :: kwt       !
-  real :: aw        !
-  real :: dz        !
+  real :: ldep      ! Deposition load (g/year)
+  real :: li        ! Runoff load from impervious surfaces (g/year)
+  real :: lr        ! Runoff load from perious surfaces (g/year)
+  real :: le        ! Soil erosion load (g/year)
+  real :: vfx       ! Average volume metric flow rate through water body (m3/year)
+  real :: fwc       ! Fraction of total water body Hg concentration in water column
+  real :: kwt       ! Overall total water body Hg dissipation rate constant (year-1)
+  real :: aw        ! Water body surface (m2)
+  real :: dz        ! Total water body depth (m)
 
   real :: upline
   real :: unline
