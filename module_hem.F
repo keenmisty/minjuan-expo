@@ -8,6 +8,19 @@ module hem_calculate
 ! by changming
 ! 2016-12-10
 
+implicit none
+
+real, parameter :: small_value = 1.e-36
+real, parameter :: large_value = 1.e36
+
 contains
+
+subroutine disoiling_calculate(disoiling,cshg,irsoil,efsoil,ed,days,at,bw,hours)
+
+  real :: disoiling ! Daily intake of Hg via non-dietary ingestion of soil (mg/kg-day)
+  real :: cshg      ! soil Hg concentration (mg/kg)
+
+
+end subroutine disoiling_calculate
 
 end module hem_calculate
