@@ -18,7 +18,8 @@ contains
 subroutine disoiling_calculate(disoiling,cshg,irsoil,efsoil,ed,days,at,bw,hours)
 
   real :: disoiling ! Daily intake of Hg via non-dietary ingestion of soil (mg/kg-day)
-  real :: cshg      ! soil Hg concentration (mg/kg)
+  real :: cshg      ! Soil Hg concentration (mg/kg)
+  real :: irsoil    ! Soil daily non-dietary intake (mg/day)
 
 
 end subroutine disoiling_calculate
