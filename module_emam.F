@@ -32,7 +32,7 @@ subroutine cshg_calculate(cshg,dtot,ks,t,zs,bd)
   underline =zs*bd*ks
 
   ! need to notice that underline shouldnot be zero.
-  if(underline = 0) then
+  if(underline == 0.0) then
      underline = small_value
   end if
 
@@ -61,12 +61,39 @@ subroutine cwtot_calculate(cwtot,ldep,li,lr,le,vfx,fwc,kwt,aw,dz)
   unline = vfx*fwc+kwt*aw*dz
 
   ! need to notice that underline shouldnot be zero.
-  if(unline = 0) then
+  if(unline == 0.0) then
      unline = small_value
   end if
 
   cwtot  = upline/unline
 
 end subroutine cwtot_calculate
+
+subroutine cdw_calculate(cdw,fwc,cwtot,dz,dwc,kdsw,tss)
+
+! implicit none
+  real :: cdw       ! Dissolved phase water concentration (mg/L)
+  real :: cwtot     ! Total water body Hg concentration (mg/L)
+  real :: fwc       ! Fraction of total water body Hg concentration in water column
+  real :: dz        ! Total water body depth (m)
+  real :: dwc       ! Depth of water column (m)
+  real :: kdsw      ! Suspended sediments/surface water partition coefficient
+  real :: tss       ! Total suspended solids concentration (mg/L)
+
+  real :: uline
+
+  uline = 1+kdsw*tss*1.e-6
+
+  if(uline == 0.0) then
+     uline = small_value
+  end if
+
+  if(dwc == 0.0) then
+     dwc = small_value
+  end if
+
+  cdw = fwc*cwtot*dz/(dwc*uline)
+
+end subroutine cdw_calculate
 
 end module emam_calculate
