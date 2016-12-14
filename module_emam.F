@@ -96,4 +96,74 @@ subroutine cdw_calculate(cdw,fwc,cwtot,dz,dwc,kdsw,tss)
 
 end subroutine cdw_calculate
 
+subroutine cpdj_calculate(cpdj,dyd,dyw,rpj,kpj,tpj,ypj)
+
+! implicit none
+  real :: cpdj
+  real :: dyd
+  real :: dyw
+  real :: rpj
+  real :: kpj
+  real :: tpj
+  real :: ypj
+
+  real :: undline
+
+  undline = 1000*kpj*ypj
+
+  if(undline == 0.0) then
+     undline = small_value
+  end if
+
+  cpdj=(dyd+0.6*dyw)*rpj*(1-exp(-kpj*tpj))/undline
+
+end subroutine cpdj_calculate
+
+subroutine cprj_calculate(cprj,cshg,brj)
+
+! implicit none
+  real :: cprj
+  real :: cshg
+  real :: brj
+
+  cprj = cshg*brj
+
+end subroutine cprj_calculate
+
+subroutine cai_calculate(cai,qpij,cpdj,cprj,qsi,cshg,bai)
+
+! implicit none
+  real :: cai
+  real :: qpij
+  real :: cpdj
+  real :: cprj
+  real :: qsi
+  real :: cshg
+  real :: bai
+
+  real :: cai_temp
+  real :: caiqp_temp = 0
+  integer, parameter :: jline=num_of_plants
+
+  cai_temp   = qsi*cs*bai
+  
+  do j=1, jline, 1
+  caiqp_temp = caiqp_temp + qpij(j)*(cpdj(j)+cprj(j))
+  end do
+
+  cai        = cai_temp + caiqp_temp
+
+end subroutine cai_calculate
+
+subroutine cfish_calculate
+
+! implicit none
+  real :: cfish
+  real :: cdw
+  real :: baffish
+
+  cfish = cdw*baffish
+
+end subroutine cfish_calculate
+
 end module emam_calculate
