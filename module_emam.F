@@ -15,6 +15,8 @@ real, parameter :: large_value = 1.e36
 
 contains
 
+!-------------------------------------------------------------------------------------------
+
 subroutine cshg_calculate(cshg,dtot,ks,t,zs,bd)
 
 ! implicit none
@@ -39,6 +41,8 @@ subroutine cshg_calculate(cshg,dtot,ks,t,zs,bd)
   cshg      =online/underline
 
 end subroutine cshg_calculate
+
+!-------------------------------------------------------------------------------------------
 
 subroutine cwtot_calculate(cwtot,ldep,li,lr,le,vfx,fwc,kwt,aw,dz)
 
@@ -69,6 +73,8 @@ subroutine cwtot_calculate(cwtot,ldep,li,lr,le,vfx,fwc,kwt,aw,dz)
 
 end subroutine cwtot_calculate
 
+!-------------------------------------------------------------------------------------------
+
 subroutine cdw_calculate(cdw,fwc,cwtot,dz,dwc,kdsw,tss)
 
 ! implicit none
@@ -96,6 +102,8 @@ subroutine cdw_calculate(cdw,fwc,cwtot,dz,dwc,kdsw,tss)
 
 end subroutine cdw_calculate
 
+!-------------------------------------------------------------------------------------------
+
 subroutine cpdj_calculate(cpdj,dyd,dyw,rpj,kpj,tpj,ypj)
 
 ! implicit none
@@ -119,6 +127,8 @@ subroutine cpdj_calculate(cpdj,dyd,dyw,rpj,kpj,tpj,ypj)
 
 end subroutine cpdj_calculate
 
+!-------------------------------------------------------------------------------------------
+
 subroutine cprj_calculate(cprj,cshg,brj)
 
 ! implicit none
@@ -129,6 +139,8 @@ subroutine cprj_calculate(cprj,cshg,brj)
   cprj = cshg*brj
 
 end subroutine cprj_calculate
+
+!-------------------------------------------------------------------------------------------
 
 subroutine cai_calculate(cai,qpij,cpdj,cprj,qsi,cshg,bai)
 
@@ -155,6 +167,8 @@ subroutine cai_calculate(cai,qpij,cpdj,cprj,qsi,cshg,bai)
 
 end subroutine cai_calculate
 
+!-------------------------------------------------------------------------------------------
+
 subroutine cfish_calculate(cfish,cdw,baffish)
 
 ! implicit none
@@ -165,5 +179,7 @@ subroutine cfish_calculate(cfish,cdw,baffish)
   cfish = cdw*baffish
 
 end subroutine cfish_calculate
+
+!-------------------------------------------------------------------------------------------
 
 end module emam_calculate
