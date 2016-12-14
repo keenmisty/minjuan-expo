@@ -26,7 +26,7 @@ subroutine disoiling_calculate(disoiling,cshg,irsoil,efsoil,ed,days,at,bw,hours)
   real :: disoiling ! Daily intake of Hg via non-dietary ingestion of soil (mg/kg-day)
   real :: cshg      ! Soil Hg concentration (mg/kg)
   real :: irsoil    ! Soil daily non-dietary intake (mg/day)
-  real :: efsoil
+  real :: efsoil    ! Exposure frequency to soil (h/day)
   real :: ed
   integer :: days
   real :: at
