@@ -155,7 +155,7 @@ subroutine cai_calculate(cai,qpij,cpdj,cprj,qsi,cshg,bai)
 
 end subroutine cai_calculate
 
-subroutine cfish_calculate
+subroutine cfish_calculate(cfish,cdw,baffish)
 
 ! implicit none
   real :: cfish
