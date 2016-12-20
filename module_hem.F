@@ -66,4 +66,19 @@ end subroutine disoilder_calculate
 
 !------------------------------------------
 
+subroutine diswiming_calculate
+
+  real :: diswiming
+  real :: cw
+  real :: irswiming
+  real :: efswim
+  real :: ed
+  real :: at
+  real :: bw
+  integer :: days
+
+end subroutine diswiming_calculate
+
+!------------------------------------------
+
 end module hem_calculate
