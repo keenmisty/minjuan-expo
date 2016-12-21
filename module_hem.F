@@ -43,7 +43,7 @@ end subroutine disoiling_calculate
 
 !------------------------------------------
 
-subroutine disoilder_calculate
+subroutine disoilder_calculate(disoilder,cshg,esa,af,absf,efsoil,ed,at,bw,days,hours)
 
   real :: disoilder
   real :: cshg
@@ -66,7 +66,7 @@ end subroutine disoilder_calculate
 
 !------------------------------------------
 
-subroutine diswiming_calculate
+subroutine diswiming_calculate(diswiming,cw,irswiming,efswim,ed,at,bw,days)
 
   real :: diswiming
   real :: cw
