@@ -66,7 +66,7 @@ end subroutine disoilder_calculate
 
 !------------------------------------------
 
-subroutine diswiming_calculate(diswiming,cw,irswiming,efswim,ed,at,bw,days)
+subroutine diswiming_calculate(diswiming,cw,irswiming,efswim,ed,at,bw)
 
   real :: diswiming
   real :: cw
@@ -75,7 +75,12 @@ subroutine diswiming_calculate(diswiming,cw,irswiming,efswim,ed,at,bw,days)
   real :: ed
   real :: at
   real :: bw
-  integer :: days
+
+  real :: underline
+
+  underline = at*bw
+
+  diswiming = cw*irswiming*efswim*ed*1.0e-6/underline
 
 end subroutine diswiming_calculate
 
