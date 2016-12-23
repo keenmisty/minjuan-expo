@@ -5,8 +5,11 @@ module emam_calculate
 !
 ! This module is for Environmental Media Accumulation Model 
 !
-! by changming
-! 2016-12-12
+! Created by Dr. Minjuan Huang.
+!
+! Modified by Dr. Ming Chang.
+!
+! 2016-12-23
 
 implicit none
 
