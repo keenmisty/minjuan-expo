@@ -80,7 +80,7 @@ subroutine diswiming_calculate(diswiming,cw,irswiming,efswim,ed,at,bw)
 
   underline = at*bw
 
-  diswiming = cw*irswiming*efswim*ed*1.0e-6/underline
+  diswiming = cw*irswiming*efswim*ed*1.0e-3/underline
 
 end subroutine diswiming_calculate
 
@@ -107,6 +107,44 @@ subroutine diswimder_calculate(diswimder,cw,tsa,kp,ev,efswim,ed,at,bw)
 end subroutine diswiming_calculate
 
 !------------------------------------------
+
+subroutine diw_calculate(diw,cdw,irdrinkw,ed,years,at,bw)
+
+  real :: diw
+  real :: cdw
+  real :: irdrinkw
+  real :: ed
+  real :: at
+  real :: bw
+  integer :: years
+
+  real :: underline
+
+  underline  = at*bw
+
+  diw        = cdw*irdrinkw*ed*years*1.0e-3/underline
+
+end subroutine diw_calculate
+
+!------------------------------------------
+
+subroutine difood_calculate(difood,cfood,irfood,ed,years,at,bw)
+
+  real :: difood
+  real :: cfood
+  real :: irfood
+  real :: ed
+  real :: at
+  real :: bw
+  integer :: years
+
+  real :: underline
+
+  underline  = at*bw
+
+  difood     = cfood*irfood*ed*years*1.0e-3/underline
+
+end subroutine difood_calculate
 
 
 end module hem_calculate
