@@ -5,10 +5,11 @@ module hem_calculate
 !
 ! This module is for Human Exposure Model
 ! 
-! test for change
+! created by Dr. Minjuan Huang.
 !
-! by changming
-! 2016-12-10
+! modified by Dr. Ming Chang.
+!
+! 2016-12-23
 
 implicit none
 
@@ -146,5 +147,6 @@ subroutine difood_calculate(difood,cfood,irfood,ed,years,at,bw)
 
 end subroutine difood_calculate
 
+!------------------------------------------
 
 end module hem_calculate
