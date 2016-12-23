@@ -81,4 +81,21 @@ end subroutine diswiming_calculate
 
 !------------------------------------------
 
+subroutine diswimder_calculate(diswimder,cw,tsa,kp,ev,efswim,ed,at,bw)
+
+  real :: diswimder
+  real :: cw
+  real :: tsa
+  real :: kp
+  real :: ev
+  real :: efswim
+  real :: ed
+  real :: at
+  real :: bw
+
+end subroutine diswiming_calculate
+
+!------------------------------------------
+
+
 end module hem_calculate
