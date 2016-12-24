@@ -11,6 +11,29 @@ module apr_calculate
 !
 ! 2016-12-23
 
+implicit none
+
+real, parameter :: small_value = 1.e-36
+real, parameter :: large_value = 1.e36
+
+contains
+
+!-------------------------------------------------------------------------------------------
+
+subroutine ks_calculate(ks,kst,ksv,ksr,kse)
+
+  real :: ks
+  real :: kst
+  real :: ksv
+  real :: ksr
+  real :: kse
+
+  ks = kst + ksv + ksr + kse
+
+end subroutine ks_calculate
+
+!-------------------------------------------------------------------------------------------
+
 
 
 end module apr_calculate
