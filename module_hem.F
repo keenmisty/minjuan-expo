@@ -28,10 +28,10 @@ subroutine disoiling_calculate(disoiling,cshg,irsoil,efsoil,ed,days,at,bw,hours)
   real :: cshg      ! Soil Hg concentration (mg/kg)
   real :: irsoil    ! Soil daily non-dietary intake (mg/day)
   real :: efsoil    ! Exposure frequency to soil (h/day)
-  real :: ed
-  integer :: days
-  real :: at
-  real :: bw
+  real :: ed        ! Exposure duration (year)
+  integer :: days   
+  real :: at        ! 
+  real :: bw        ! Body weight (kg)
   integer :: hours
 
   real :: underlines
