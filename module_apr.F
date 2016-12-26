@@ -22,11 +22,11 @@ contains
 
 subroutine ks_calculate(ks,ksl,ksv,ksr,kse)
 
-  real :: ks
-  real :: ksl
-  real :: ksv
-  real :: ksr
-  real :: kse
+  real :: ks            ! Soil Hg loss constant (year-1)
+  real :: ksl           ! Soil Hg loss constant (year-1)
+  real :: ksv           ! Soil Hg loss constant (year-1)
+  real :: ksr           ! Soil Hg loss constant (year-1)
+  real :: kse           ! Soil Hg loss constant (year-1)
 
   ks = ksl + ksv + ksr + kse
 
