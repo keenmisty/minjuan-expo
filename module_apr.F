@@ -20,20 +20,42 @@ contains
 
 !-------------------------------------------------------------------------------------------
 
-subroutine ks_calculate(ks,kst,ksv,ksr,kse)
+subroutine ks_calculate(ks,ksl,ksv,ksr,kse)
 
   real :: ks
-  real :: kst
+  real :: ksl
   real :: ksv
   real :: ksr
   real :: kse
 
-  ks = kst + ksv + ksr + kse
+  ks = ksl + ksv + ksr + kse
 
 end subroutine ks_calculate
 
 !-------------------------------------------------------------------------------------------
 
+subroutine ksl_calculate(p,i,ro,ev,thetasw,zs,bd,kds)
 
+  real :: ksl
+  real :: p
+  real :: i
+  real :: ro
+  real :: ev
+  real :: thetasw
+  real :: zs
+  real :: bd
+  real :: kds
+
+  real :: temp_a,temp_b
+
+  temp_a = bd * kds / thetasw
+
+  temp_b = thetasw * zs * (1 + temp_a)
+
+  ksl    = (p + i - ro - ev) / temp_b
+
+end subroutine ksl_calculate
+
+!-------------------------------------------------------------------------------------------
 
 end module apr_calculate
