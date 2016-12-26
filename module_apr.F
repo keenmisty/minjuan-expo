@@ -83,4 +83,25 @@ subroutine ksv_calculate(ksv,h,zs,kds,r,ta,bd,da,rou_soil,thetasw)
 
 end subroutine ksv_calculate
 
+!-------------------------------------------------------------------------------------------
+
+subroutine ksr_calculate(ksr,ro,thetasw,zs,kds,bd)
+
+  real :: ksr
+  real :: ro
+  real :: thetasw
+  real :: zs
+  real :: kds
+  real :: bd
+
+  real :: temp_a,temp_b
+
+  temp_a = bd * kds / thetasw
+
+  temp_b = thetasw * zs * (1 + temp_a)
+
+  ksr    = ro / temp_b
+
+end subroutine ksr_calculate
+
 end module apr_calculate
