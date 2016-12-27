@@ -127,4 +127,18 @@ subroutine kse_calculate(kse,xe,sd,er,bd,zs,kds,thetasw)
 
 end subroutine kse_calculate
 
+!-------------------------------------------------------------------------------------------
+
+subroutine ldep_calculate(ldep,dtot,aw)
+
+  real :: ldep
+  real :: dtot
+  real :: aw
+
+  ldep = dtot * aw * 1e-6
+
+end subroutine ldep_calculate
+
+!-------------------------------------------------------------------------------------------
+
 end module apr_calculate
