@@ -1,4 +1,4 @@
-module emam_calculate
+module module_emam
 ! The equations are from Minjuan Huang et al., "Impacts of Atmospheric 
 ! Mercury Deposition on Human Multimedia Exposure: Projection from 
 ! Observations in the Pearl River Delta Region, South China" 
@@ -185,4 +185,4 @@ end subroutine cfish_calculate
 
 !-------------------------------------------------------------------------------------------
 
-end module emam_calculate
+end module module_emam
