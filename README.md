@@ -8,6 +8,7 @@
 
 * Environmental Media Accumulation Model的subroutines
 * Human Exposure Model的subroutines
+* Alternative Projected Results的subroutines
 * 数据和参数的I/O程序
 * 总的调用程序driver.F
 * 编译所需的makefile
