@@ -252,6 +252,14 @@ end subroutine kwt_calculate
 
 !-------------------------------------------------------------------------------------------
 
+subroutine vfx_calculate(Vfx,Aw,RO)
 
+  real :: Vfx
+  real :: Aw
+  real :: RO
+
+  Vfx = Aw * RO / 100
+
+end subroutine vfx_calculate
 
 end module apr_calculate
