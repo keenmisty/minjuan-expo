@@ -94,16 +94,37 @@ subroutine ksr_calculate(ksr,ro,thetasw,zs,kds,bd)
   real :: kds
   real :: bd
 
-  real :: temp_a,temp_b
+  real :: temp_f,temp_g
 
-  temp_a = bd * kds / thetasw
+  temp_f = bd * kds / thetasw
 
-  temp_b = thetasw * zs * (1 + temp_a)
+  temp_g = thetasw * zs * (1 + temp_a)
 
-  ksr    = ro / temp_b
+  ksr    = ro / temp_g
 
 end subroutine ksr_calculate
 
 !-------------------------------------------------------------------------------------------
+
+subroutine kse_calculate(kse,xe,sd,er,bd,zs,kds,thetasw)
+
+  real :: kse
+  real :: xe
+  real :: sd
+  real :: er
+  real :: bd
+  real :: zs
+  real :: kds
+  real :: thetasw
+
+  real :: temp_h,temp_i
+
+  temp_h = 0.1 * xe * sd * er / (bd * zs)
+
+  temp_i = kds * bd / (kds * bd + thetasw)
+
+  kse    = temp_h * temp_i
+
+end subroutine kse_calculate
 
 end module apr_calculate
