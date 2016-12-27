@@ -153,4 +153,29 @@ end subroutine li_calculate
 
 !-------------------------------------------------------------------------------------------
 
+subroutine lr_calculate(lr,ro,al,ai,cs,bd,thetasw,kds)
+  
+  real :: lr
+  real :: ro
+  real :: al
+  real :: ai
+  real :: cs
+  real :: bd
+  real :: thetasw
+  real :: kds
+
+  real :: temp_j,temp_k
+
+  temp_j = cs * bd / (kds * bd + thetasw)
+
+  temp_k = ro * (al - ai)
+
+  lr     = temp_j * temp_k * 0.01
+
+end subroutine lr_calculate
+
+!-------------------------------------------------------------------------------------------
+
+
+
 end module apr_calculate
