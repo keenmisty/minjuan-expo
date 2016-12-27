@@ -176,6 +176,31 @@ end subroutine lr_calculate
 
 !-------------------------------------------------------------------------------------------
 
+subroutine le_calculate(le,xe,al,ai,sd,er,cs,kds,bd,thetasw)
+
+  real :: Le
+  real :: Xe
+  real :: AL
+  real :: AI
+  real :: SD
+  real :: ER
+  real :: Cs
+  real :: Kds
+  real :: BD
+  real :: thetasw
+
+  real :: temp_l,temp_m
+
+  temp_l = Kds * CS * BD / (kds * bd + thetasw)
+  
+  temp_m = Xe * SD * ER * (AL-AI)
+
+  Le     = temp_l * temp_m * 0.001
+
+end subroutine le_calculate
+
+!-------------------------------------------------------------------------------------------
+
 
 
 end module apr_calculate
