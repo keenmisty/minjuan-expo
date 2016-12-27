@@ -105,7 +105,7 @@ subroutine diswimder_calculate(diswimder,cw,tsa,kp,ev,efswim,ed,at,bw)
 
   diswimder = cw*tsa*kp*ev*efswim*ed/underln
 
-end subroutine diswiming_calculate
+end subroutine diswimder_calculate
 
 !------------------------------------------
 
