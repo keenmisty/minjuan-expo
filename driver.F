@@ -7,7 +7,11 @@ program driver
   use module_io
 
   !
-  ! Module
+  ! Use module_emam for Environmental Media Accumulation Model
   !
+  
+  use module_emam
+
+
 
 end program driver
