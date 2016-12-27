@@ -57,4 +57,6 @@ program driver
      stop ":  ERROR EXIT"
   endif
 
+  print "hello world"
+
 end program driver
