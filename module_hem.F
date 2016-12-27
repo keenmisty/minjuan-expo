@@ -1,4 +1,4 @@
-module hem_calculate
+module module_hem
 ! The equations are from Minjuan Huang et al., "Impacts of Atmospheric
 ! Mercury Deposition on Human Multimedia Exposure: Projection from
 ! Observations in the Pearl River Delta Region, South China"
@@ -149,4 +149,4 @@ end subroutine difood_calculate
 
 !------------------------------------------
 
-end module hem_calculate
+end module module_hem
