@@ -60,7 +60,7 @@ end subroutine ksl_calculate
 
 subroutine ksv_calculate(ksv,h,zs,kds,r,ta,bd,da,rou_soil,thetasw)
 
-  real, parameter :: temp_p = 3.1536e7
+  real, parameter :: temp_z = 3.1536e7
   real :: h
   real :: zs
   real :: kds
@@ -73,7 +73,7 @@ subroutine ksv_calculate(ksv,h,zs,kds,r,ta,bd,da,rou_soil,thetasw)
 
   real :: temp_c,temp_d,temp_e
 
-  temp_c = temp_p * h / (zs * kds * r * ta *bd)
+  temp_c = temp_z * h / (zs * kds * r * ta *bd)
 
   temp_d = da / zs
 
@@ -222,6 +222,33 @@ subroutine fwc_calculate(Fwc,Kdsw,TSS,dwc,dz,thetabs,Kdbs,Cbs,dbs)
   Fwc    = temp_n / (temp_n + temp_o)
 
 end subroutine fwc_calculate
+
+!-------------------------------------------------------------------------------------------
+
+subroutine kwt_calculate(kwt,Fwc,Xe,AL,SD,Vfx,TSS,Aw,Cbs,dbs)
+
+  real :: kwt
+  real :: Fwc
+  real :: Xe
+  real :: AL
+  real :: SD
+  real :: Vfx
+  real :: TSS
+  real :: Aw
+  real :: Cbs
+  real :: dbs
+
+  real :: temp_p,temp_q,temp_r
+
+  temp_p = 1 - Fwc
+
+  temp_q = (Xe * AL * SD * 1000 - Vfx * TSS) / (Aw * TSS)
+
+  temp_r = TSS / (Cbs * dbs * 1e6)
+
+  kwt    = temp_p * temp_q * temp_r
+
+end subroutine kwt_calculate
 
 !-------------------------------------------------------------------------------------------
 
