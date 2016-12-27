@@ -262,4 +262,16 @@ subroutine vfx_calculate(Vfx,Aw,RO)
 
 end subroutine vfx_calculate
 
+!-------------------------------------------------------------------------------------------
+
+subroutine rp_calculate(Rp,gamma_j,Yp)
+
+  real :: Rp
+  real :: gamma_j
+  real :: Yp
+
+  Rp = 1 - e ** (-gamma_j * Yp)
+
+end subroutine rp_calculate
+
 end module apr_calculate
