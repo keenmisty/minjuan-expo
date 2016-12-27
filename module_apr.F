@@ -36,12 +36,12 @@ end subroutine ks_calculate
 
 subroutine ksl_calculate(p,i,ro,ev,thetasw,zs,bd,kds)
 
-  real :: ksl
-  real :: p
-  real :: i
-  real :: ro
-  real :: ev
-  real :: thetasw
+  real :: ksl           ! Soil Hg loss constant (year-1)
+  real :: p             ! Average Annual Precipitation (cm/year) 
+  real :: i             ! Average Annual Irrigation (cm/year)
+  real :: ro            ! Average Annual Surface Runoff (cm/year)
+  real :: ev            ! Average Annual Evapotranspiration (cm/year)
+  real :: thetasw       ! 
   real :: zs
   real :: bd
   real :: kds
