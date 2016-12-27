@@ -77,7 +77,7 @@ subroutine ksv_calculate(ksv,h,zs,kds,r,ta,bd,da,rou_soil,thetasw)
 
   temp_d = da / zs
 
-  temp_e = 1 - bd / rou_soil - theatsw
+  temp_e = 1 - bd / rou_soil - thetasw
 
   ksv    = temp_c * temp_d * temp_e
 
