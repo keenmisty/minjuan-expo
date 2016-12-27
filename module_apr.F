@@ -201,6 +201,28 @@ end subroutine le_calculate
 
 !-------------------------------------------------------------------------------------------
 
+subroutine fwc_calculate(Fwc,Kdsw,TSS,dwc,dz,thetabs,Kdbs,Cbs,dbs)
+
+  real :: Fwc
+  real :: Kdsw
+  real :: TSS
+  real :: dwc
+  real :: dz
+  real :: thetabs
+  real :: Kdbs
+  real :: Cbs
+  real :: dbs
+
+  real :: temp_n,temp_o
+
+  temp_n = (1 + Kdsw * TSS * 1e-6) * dwc / dz
+
+  temp_o = (thetabs + Kdbs * Cbs) * dbs / dz
+
+  Fwc    = temp_n / (temp_n + temp_o)
+
+end subroutine fwc_calculate
+
 
 
 end module apr_calculate
