@@ -42,7 +42,7 @@ subroutine ksl_calculate(p,i,ro,ev,thetasw,zs,bd,kds)
   real :: ro            ! Average Annual Surface Runoff (cm/year)
   real :: ev            ! Average Annual Evapotranspiration (cm/year)
   real :: thetasw       ! 
-  real :: zs
+  real :: zs            ! Soil Mixing Zone Depth (cm)
   real :: bd
   real :: kds
 
