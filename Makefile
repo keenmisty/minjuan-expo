@@ -16,7 +16,7 @@ FFLAGS =        $(FREESOURCE) $(F90FLAGS)
 all:    $(CMD)
 
 driver.exe:     $(OBJS)
-        $(COMPILERF90) -o $(@) $(OBJS) $(NETCDFLIB)
+	$(COMPILERF90) -o $(@) $(OBJS) $(NETCDFLIB)
 
 .F.o:
 	$(RM) $(*).f90
