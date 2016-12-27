@@ -61,6 +61,7 @@ end subroutine ksl_calculate
 subroutine ksv_calculate(ksv,h,zs,kds,r,ta,bd,da,rou_soil,thetasw)
 
   real, parameter :: temp_z = 3.1536e7
+  real :: ksv
   real :: h
   real :: zs
   real :: kds
@@ -98,7 +99,7 @@ subroutine ksr_calculate(ksr,ro,thetasw,zs,kds,bd)
 
   temp_f = bd * kds / thetasw
 
-  temp_g = thetasw * zs * (1 + temp_a)
+  temp_g = thetasw * zs * (1 + temp_f)
 
   ksr    = ro / temp_g
 
@@ -270,7 +271,11 @@ subroutine rp_calculate(Rp,gamma_j,Yp)
   real :: gamma_j
   real :: Yp
 
-  Rp = 1 - e ** (-gamma_j * Yp)
+  real :: temp_s
+
+  temp_s = - gamma_j * Yp
+
+  Rp = 1 - exp(temp_s)
 
 end subroutine rp_calculate
 
