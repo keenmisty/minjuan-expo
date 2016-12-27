@@ -141,4 +141,16 @@ end subroutine ldep_calculate
 
 !-------------------------------------------------------------------------------------------
 
+subroutine li_calculate(li,dtot,ai)
+
+  real :: li
+  real :: dtot
+  real :: ai
+
+  li   = dtot * ai * 1e-6
+
+end subroutine li_calculate
+
+!-------------------------------------------------------------------------------------------
+
 end module apr_calculate
