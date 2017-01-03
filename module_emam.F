@@ -110,11 +110,11 @@ end subroutine cdw_calculate
 subroutine cpdj_calculate(cpdj,dyd,dyw,rpj,kpj,tpj,ypj)
 
 ! implicit none
-  real :: cpdj
-  real :: dyd
-  real :: dyw
-  real :: rpj
-  real :: kpj
+  real :: cpdj      ! Plant(j) concentration due to direct deposition (mg/kg)
+  real :: dyd       ! Yearly dry deposition (ug/m3/year)
+  real :: dyw       ! Yearly wet deposition (ug/m3/year)
+  real :: rpj       ! Interception fraction of deposition for specific plant
+  real :: kpj       ! 
   real :: tpj
   real :: ypj
 
