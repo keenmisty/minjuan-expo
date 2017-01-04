@@ -15,8 +15,8 @@ implicit none
 
 real, parameter :: small_value = 1.e-36
 real, parameter :: large_value = 1.e36
-integer, parameter :: days = 365
-integer, parameter :: hours = 24
+integer, parameter :: days = 365 ! days in a year
+integer, parameter :: hours = 24 ! hours in a day
 
 contains
 
