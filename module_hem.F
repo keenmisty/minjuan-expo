@@ -36,9 +36,9 @@ subroutine disoiling_calculate(disoiling,cshg,irsoil,efsoil,ed,days,at,bw,hours)
 
   real :: underlines
 
-  underlines= at*bw*hours
+  underlines= at * bw * hours
 
-  disoiling = cshg*irsoil*efsoil*ed*days*1.0e-6/underlines
+  disoiling = cshg * irsoil * efsoil * ed * days * 1.0e-6 / underlines
 
 end subroutine disoiling_calculate
 
