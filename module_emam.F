@@ -175,9 +175,9 @@ end subroutine cai_calculate
 subroutine cfish_calculate(cfish,cdw,baffish)
 
 ! implicit none
-  real :: cfish
-  real :: cdw
-  real :: baffish
+  real :: cfish     ! Concentration of Hg in fish (mg Hg/kg FW tissue)
+  real :: cdw       ! Dissolved phase water concentration (mg/L)
+  real :: baffish   ! Bioaccumulation factor for Hg in fish (1/kg FW tissue)
 
   cfish = cdw * baffish
 
