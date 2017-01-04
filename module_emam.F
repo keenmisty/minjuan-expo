@@ -41,7 +41,7 @@ subroutine cshg_calculate(cshg,dtot,ks,t,zs,bd)
      underline = small_value
   end if
 
-  cshg      =online/underline
+  cshg      = online / underline
 
 end subroutine cshg_calculate
 
@@ -64,15 +64,15 @@ subroutine cwtot_calculate(cwtot,ldep,li,lr,le,vfx,fwc,kwt,aw,dz)
   real :: upline
   real :: unline
 
-  upline = ldep+li+lr+le
-  unline = vfx*fwc+kwt*aw*dz
+  upline = ldep + li + lr + le
+  unline = vfx * fwc + kwt * aw * dz
 
   ! need to notice that underline shouldnot be zero.
   if(unline == 0.0) then
      unline = small_value
   end if
 
-  cwtot  = upline/unline
+  cwtot  = upline / unline
 
 end subroutine cwtot_calculate
 
@@ -101,7 +101,7 @@ subroutine cdw_calculate(cdw,fwc,cwtot,dz,dwc,kdsw,tss)
      dwc = small_value
   end if
 
-  cdw = fwc*cwtot*dz/(dwc*uline)
+  cdw = fwc * cwtot * dz / (dwc * uline)
 
 end subroutine cdw_calculate
 
@@ -126,7 +126,7 @@ subroutine cpdj_calculate(cpdj,dyd,dyw,rpj,kpj,tpj,ypj)
      undline = small_value
   end if
 
-  cpdj=(dyd+0.6*dyw)*rpj*(1-exp(-kpj*tpj))/undline
+  cpdj = (dyd + 0.6 * dyw) * rpj * (1 - exp(-kpj * tpj)) / undline
 
 end subroutine cpdj_calculate
 
@@ -139,7 +139,7 @@ subroutine cprj_calculate(cprj,cshg,brj)
   real :: cshg
   real :: brj
 
-  cprj = cshg*brj
+  cprj = cshg * brj
 
 end subroutine cprj_calculate
 
@@ -160,10 +160,10 @@ subroutine cai_calculate(cai,qpij,cpdj,cprj,qsi,cshg,bai)
   real :: caiqp_temp = 0
   integer, parameter :: jline=num_of_plants
 
-  cai_temp   = qsi*cs*bai
+  cai_temp   = qsi * cs * bai
   
   do j=1, jline, 1
-  caiqp_temp = caiqp_temp + qpij(j)*(cpdj(j)+cprj(j))
+  caiqp_temp = caiqp_temp + qpij(j) * (cpdj(j) + cprj(j))
   end do
 
   cai        = cai_temp + caiqp_temp
@@ -179,7 +179,7 @@ subroutine cfish_calculate(cfish,cdw,baffish)
   real :: cdw
   real :: baffish
 
-  cfish = cdw*baffish
+  cfish = cdw * baffish
 
 end subroutine cfish_calculate
 
