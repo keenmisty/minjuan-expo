@@ -59,9 +59,9 @@ subroutine disoilder_calculate(disoilder,cshg,esa,af,absf,efsoil,ed,at,bw,days,h
 
   real :: underlines
 
-  underlines= at*bw*hours
+  underlines= at * bw * hours
 
-  disoilder = cshg*esa*af*absf*efsoil*ed*days*1.0e-2/underlines
+  disoilder = cshg * esa * af * absf * efsoil * ed * days * 1.0e-2 / underlines
 
 end subroutine disoilder_calculate
 
