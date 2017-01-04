@@ -114,9 +114,9 @@ subroutine cpdj_calculate(cpdj,dyd,dyw,rpj,kpj,tpj,ypj)
   real :: dyd       ! Yearly dry deposition (ug/m3/year)
   real :: dyw       ! Yearly wet deposition (ug/m3/year)
   real :: rpj       ! Interception fraction of deposition for specific plant
-  real :: kpj       ! 
-  real :: tpj
-  real :: ypj
+  real :: kpj       ! Plant(j) surface loss (year-1) 
+  real :: tpj       ! Length of plant(j) exposure to deposition before harvest (year)
+  real :: ypj       ! Standing biomass of plant(j) (kg/m2)
 
   real :: undline
 
