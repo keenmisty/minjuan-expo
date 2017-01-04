@@ -148,13 +148,13 @@ end subroutine cprj_calculate
 subroutine cai_calculate(cai,qpij,cpdj,cprj,qsi,cshg,bai)
 
 ! implicit none
-  real :: cai
-  real :: qpij
-  real :: cpdj
-  real :: cprj
-  real :: qsi
-  real :: cshg
-  real :: bai
+  real :: cai       ! Hg concentrations in livestock and poultry (mg Hg /kg FW tissue)
+  real :: qpij      ! Quantity of plants (j) eaten by livestock and poultry (i) (kg DW plants/day)
+  real :: cpdj      ! Plant(j) concentration due to direct deposition (mg/kg)
+  real :: cprj      ! Plant (j) concentration due to soil absorption (mg/kg)
+  real :: qsi       ! Quantity of soil eaten by livestock and poultry (i) (kg/day)
+  real :: cshg      ! soil Hg concentration (mg/kg)
+  real :: bai       ! Bio-transfer factors for livestock and poultry (i) (day/kg DW)
 
   real :: cai_temp
   real :: caiqp_temp = 0
