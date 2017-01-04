@@ -135,9 +135,9 @@ end subroutine cpdj_calculate
 subroutine cprj_calculate(cprj,cshg,brj)
 
 ! implicit none
-  real :: cprj
-  real :: cshg
-  real :: brj
+  real :: cprj      ! Plant (j) concentration due to soil absorption (mg/kg)
+  real :: cshg      ! soil Hg concentration (mg/kg)
+  real :: brj       ! Root concentration factor for specific plant (j)
 
   cprj = cshg * brj
 
