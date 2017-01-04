@@ -30,7 +30,7 @@ subroutine disoiling_calculate(disoiling,cshg,irsoil,efsoil,ed,days,at,bw,hours)
   real :: efsoil    ! Exposure frequency to soil (h/day)
   real :: ed        ! Exposure duration (year)
   integer :: days   
-  real :: at        ! 
+  real :: at        ! Total area of land (m2)
   real :: bw        ! Body weight (kg)
   integer :: hours
 
@@ -46,15 +46,15 @@ end subroutine disoiling_calculate
 
 subroutine disoilder_calculate(disoilder,cshg,esa,af,absf,efsoil,ed,at,bw,days,hours)
 
-  real :: disoilder
-  real :: cshg
-  real :: esa
-  real :: af
-  real :: absf  ! Fraction of contaminant absorbed dermakky from soil
-  real :: efsoil
-  real :: ed
-  real :: at
-  real :: bw
+  real :: disoilder ! Daily intake of Hg via dermal contact with soil (mg/kg-day)
+  real :: cshg      ! 
+  real :: esa       ! Extremities surface area for soil dermal contact scenario (m2)
+  real :: af        ! Adherence factor of soil to skin (mg/cm2-day)
+  real :: absf      ! Fraction of contaminant absorbed dermakky from soil
+  real :: efsoil    ! Exposure frequency to soil(h/day)
+  real :: ed        ! Exposure duration (year)
+  real :: at        ! Total area of land (m2)
+  real :: bw        ! Body weight (kg)
   integer :: days,hours
 
   real :: underlines
