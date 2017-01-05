@@ -72,10 +72,10 @@ subroutine diswiming_calculate(diswiming,cw,irswiming,efswim,ed,at,bw)
   real :: diswiming ! Daily intake of Hg via water ingestion during swimming (mg/kg-day)
   real :: cw        ! ---------------------What's this?
   real :: irswiming ! Ingestion rate during each swimming event in fresh water (ml/event)
-  real :: efswim
-  real :: ed
-  real :: at
-  real :: bw
+  real :: efswim    ! Swimming frequency in fresh water per year (event/year)
+  real :: ed        ! Exposure duration (year)
+  real :: at        ! Total area of land (m2)
+  real :: bw        ! Body weight (kg)
 
   real :: underline
 
