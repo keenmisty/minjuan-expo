@@ -141,9 +141,9 @@ subroutine difood_calculate(difood,cfood,irfood,ed,years,at,bw)
 
   real :: underline
 
-  underline  = at*bw
+  underline  = at * bw
 
-  difood     = cfood*irfood*ed*years*1.0e-3/underline
+  difood     = cfood * irfood * ed * years * 1.0e-3 / underline
 
 end subroutine difood_calculate
 
