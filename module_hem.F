@@ -79,9 +79,9 @@ subroutine diswiming_calculate(diswiming,cw,irswiming,efswim,ed,at,bw)
 
   real :: underline
 
-  underline = at*bw
+  underline = at * bw
 
-  diswiming = cw*irswiming*efswim*ed*1.0e-3/underline
+  diswiming = cw * irswiming * efswim * ed * 1.0e-3 / underline
 
 end subroutine diswiming_calculate
 
