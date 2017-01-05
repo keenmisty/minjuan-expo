@@ -109,7 +109,7 @@ end subroutine diswimder_calculate
 
 !------------------------------------------
 
-subroutine diw_calculate(diw,cdw,irdrinkw,ed,years,at,bw)
+subroutine diw_calculate(diw,cdw,irdrinkw,ed,days,at,bw)
 
   real :: diw       ! Daily intake of Hg via drinking water consumption (mg/kg-day)
   real :: cdw       ! Dissolved phase water concentration (mg/L)
@@ -117,19 +117,19 @@ subroutine diw_calculate(diw,cdw,irdrinkw,ed,years,at,bw)
   real :: ed        ! Exposure duration (year)
   real :: at        ! Total area of land (m2)
   real :: bw        ! Body weight (kg)
-  integer :: years
+  integer :: days
 
   real :: underline
 
   underline  = at * bw
 
-  diw        = cdw * irdrinkw * ed * years * 1.0e-3 / underline
+  diw        = cdw * irdrinkw * ed * days * 1.0e-3 / underline
 
 end subroutine diw_calculate
 
 !------------------------------------------
 
-subroutine difood_calculate(difood,cfood,irfood,ed,years,at,bw)
+subroutine difood_calculate(difood,cfood,irfood,ed,days,at,bw)
 
   real :: difood    ! Daily intake of Hg via food consumption (mg/kg-day)
   real :: cfood     ! 
@@ -137,13 +137,13 @@ subroutine difood_calculate(difood,cfood,irfood,ed,years,at,bw)
   real :: ed        ! Exposure duration (year)
   real :: at        ! Total area of land (m2)
   real :: bw        ! Body weight (kg)
-  integer :: years
+  integer :: days
 
   real :: underline
 
   underline  = at * bw
 
-  difood     = cfood * irfood * ed * years * 1.0e-3 / underline
+  difood     = cfood * irfood * ed * days * 1.0e-3 / underline
 
 end subroutine difood_calculate
 
