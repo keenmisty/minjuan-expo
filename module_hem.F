@@ -121,9 +121,9 @@ subroutine diw_calculate(diw,cdw,irdrinkw,ed,years,at,bw)
 
   real :: underline
 
-  underline  = at*bw
+  underline  = at * bw
 
-  diw        = cdw*irdrinkw*ed*years*1.0e-3/underline
+  diw        = cdw * irdrinkw * ed * years * 1.0e-3 / underline
 
 end subroutine diw_calculate
 
