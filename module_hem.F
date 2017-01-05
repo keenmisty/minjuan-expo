@@ -101,9 +101,9 @@ subroutine diswimder_calculate(diswimder,cw,tsa,kp,ev,efswim,ed,at,bw)
 
   real :: underln
 
-  underln   = at*bw*6
+  underln   = at * bw * 6
 
-  diswimder = cw*tsa*kp*ev*efswim*ed/underln
+  diswimder = cw * tsa * kp * ev * efswim * ed / underln
 
 end subroutine diswimder_calculate
 
