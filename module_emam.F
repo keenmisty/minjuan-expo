@@ -145,7 +145,7 @@ end subroutine cprj_calculate
 
 !-------------------------------------------------------------------------------------------
 
-subroutine cai_calculate(cai,qpij,cpdj,cprj,qsi,cshg,bai)
+subroutine cai_calculate(cai,qpij,cpdj,cprj,qsi,cshg,baii,jline)
 
 ! implicit none
   real :: cai       ! Hg concentrations in livestock and poultry (mg Hg /kg FW tissue)
@@ -158,7 +158,7 @@ subroutine cai_calculate(cai,qpij,cpdj,cprj,qsi,cshg,bai)
 
   real :: cai_temp
   real :: caiqp_temp = 0
-  integer, parameter :: jline=num_of_plants
+  integer :: jline
 
   cai_temp   = qsi * cs * bai
   
