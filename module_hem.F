@@ -131,12 +131,12 @@ end subroutine diw_calculate
 
 subroutine difood_calculate(difood,cfood,irfood,ed,years,at,bw)
 
-  real :: difood
-  real :: cfood
-  real :: irfood
-  real :: ed
-  real :: at
-  real :: bw
+  real :: difood    ! Daily intake of Hg via food consumption (mg/kg-day)
+  real :: cfood     ! 
+  real :: irfood    ! Daily intake of food items (g/day)
+  real :: ed        ! Exposure duration (year)
+  real :: at        ! Total area of land (m2)
+  real :: bw        ! Body weight (kg)
   integer :: years
 
   real :: underline
