@@ -89,15 +89,15 @@ end subroutine diswiming_calculate
 
 subroutine diswimder_calculate(diswimder,cw,tsa,kp,ev,efswim,ed,at,bw)
 
-  real :: diswimder
-  real :: cw
-  real :: tsa
-  real :: kp
-  real :: ev
-  real :: efswim
-  real :: ed
-  real :: at
-  real :: bw
+  real :: diswimder ! Daily intake of Hg via dermal contact with water during swimming (mg/kg-day)
+  real :: cw        ! 
+  real :: tsa       ! Total Surface area for swimming scenario (m2)
+  real :: kp        ! Dermal permeability coefficient of compound in water (cm/h)
+  real :: ev        ! Swimming event duration in fresh water (min/event)
+  real :: efswim    ! Swimming frequency in fresh water per year (event/year)
+  real :: ed        ! Exposure duration (year)
+  real :: at        ! Total area of land (m2)
+  real :: bw        ! Body weight (kg)
 
   real :: underln
 
