@@ -111,12 +111,12 @@ end subroutine diswimder_calculate
 
 subroutine diw_calculate(diw,cdw,irdrinkw,ed,years,at,bw)
 
-  real :: diw
-  real :: cdw
-  real :: irdrinkw
-  real :: ed
-  real :: at
-  real :: bw
+  real :: diw       ! Daily intake of Hg via drinking water consumption (mg/kg-day)
+  real :: cdw       ! Dissolved phase water concentration (mg/L)
+  real :: irdrinkw  ! Daily drinking water intake (ml/day)
+  real :: ed        ! Exposure duration (year)
+  real :: at        ! Total area of land (m2)
+  real :: bw        ! Body weight (kg)
   integer :: years
 
   real :: underline
