@@ -43,7 +43,7 @@ subroutine ksl_calculate(p,i,ro,ev,thetasw,zs,bd,kds)
   real :: ev            ! Average Annual Evapotranspiration (cm/year)
   real :: thetasw       ! 
   real :: zs            ! Soil Mixing Zone Depth (cm)
-  real :: bd
+  real :: bd            ! soil bulk density (g soil/cm3 soil)
   real :: kds
 
   real :: temp_a,temp_b
