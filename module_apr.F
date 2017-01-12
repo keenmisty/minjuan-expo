@@ -63,14 +63,14 @@ subroutine ksv_calculate(ksv,h,zs,kds,r,ta,bd,da,rou_soil,thetasw)
   real, parameter :: temp_z = 3.1536e7
   real :: ksv           ! Soil Hg loss constant (year-1)
   real :: h             ! Henry's law constant (atm-m3/mol)
-  real :: zs
-  real :: kds
-  real :: r
-  real :: ta
-  real :: bd
-  real :: da
-  real :: rou_soil
-  real :: thetasw
+  real :: zs            ! Soil mixing zone depth (cm)
+  real :: kds           ! Suspended sediments/surface water partition coefficient
+  real :: r             ! Universal gas temperture
+  real :: ta            ! ?
+  real :: bd            ! Soil bulk density (g soil/cm3 soil)
+  real :: da            ! Diffuvity of COPC in air (cm2/s)
+  real :: rou_soil      ! Soilds particle density (g/cm3)
+  real :: thetasw       ! Soil volumetric content (ml water/cm3 soil)
 
   real :: temp_c,temp_d,temp_e
 
