@@ -23,10 +23,10 @@ contains
 subroutine ks_calculate(ks,ksl,ksv,ksr,kse)
 
   real :: ks            ! Soil Hg loss constant (year-1)
-  real :: ksl           ! Soil Hg loss constant (year-1)
-  real :: ksv           ! Soil Hg loss constant (year-1)
-  real :: ksr           ! Soil Hg loss constant (year-1)
-  real :: kse           ! Soil Hg loss constant (year-1)
+  real :: ksl           ! Soil Hg loss constant (year-1) ?
+  real :: ksv           ! Soil Hg loss constant (year-1) ?
+  real :: ksr           ! Soil Hg loss constant (year-1) ?
+  real :: kse           ! Soil Hg loss constant (year-1) ?
 
   ks = ksl + ksv + ksr + kse
 
@@ -61,8 +61,8 @@ end subroutine ksl_calculate
 subroutine ksv_calculate(ksv,h,zs,kds,r,ta,bd,da,rou_soil,thetasw)
 
   real, parameter :: temp_z = 3.1536e7
-  real :: ksv
-  real :: h
+  real :: ksv           ! Soil Hg loss constant (year-1)
+  real :: h             ! Henry's law constant (atm-m3/mol)
   real :: zs
   real :: kds
   real :: r
