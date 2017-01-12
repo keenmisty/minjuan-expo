@@ -44,7 +44,7 @@ subroutine ksl_calculate(p,i,ro,ev,thetasw,zs,bd,kds)
   real :: thetasw       ! 
   real :: zs            ! Soil Mixing Zone Depth (cm)
   real :: bd            ! Soil bulk density (g soil/cm3 soil)
-  real :: kds           ! 
+  real :: kds           ! Suspended sediments/surface water partition coefficient 
 
   real :: temp_a,temp_b
 
