@@ -33,8 +33,8 @@ subroutine cshg_calculate(cshg,dtot,ks,t,zs,bd)
   real :: online 
   real :: underline
 
-  online    =100*dtot*(1.0-exp(-ks*t))
-  underline =zs*bd*ks
+  online    = 100 * dtot * (1.0 - exp(-ks * t))
+  underline = zs * bd * ks
 
   ! need to notice that underline shouldnot be zero.
   if(underline == 0.0) then
