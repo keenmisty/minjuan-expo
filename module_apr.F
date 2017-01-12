@@ -88,12 +88,12 @@ end subroutine ksv_calculate
 
 subroutine ksr_calculate(ksr,ro,thetasw,zs,kds,bd)
 
-  real :: ksr
-  real :: ro
-  real :: thetasw
-  real :: zs
-  real :: kds
-  real :: bd
+  real :: ksr           ! Soil Hg loss constant (year-1)
+  real :: ro            ! ro?
+  real :: thetasw       ! Soil volumetric content (ml water/cm3 soil)
+  real :: zs            ! Soil mixing zone depth (cm)
+  real :: kds           ! Suspended sediments/surface water partition coefficient
+  real :: bd            ! Soil bulk density (g soil/cm3 soil)
 
   real :: temp_f,temp_g
 
