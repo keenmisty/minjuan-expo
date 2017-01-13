@@ -183,12 +183,12 @@ subroutine le_calculate(le,xe,al,ai,sd,er,cs,kds,bd,thetasw)
   real :: Xe            ! 
   real :: AL            ! Total Watershed Area (m2)
   real :: AI            ! Impervious Watershed Area (m2)
-  real :: SD
-  real :: ER
-  real :: Cs
-  real :: Kds
-  real :: BD
-  real :: thetasw
+  real :: SD            ! 
+  real :: ER            ! 
+  real :: Cs            ! Soil Concentration due to Deposition (mg/kg)
+  real :: Kds           ! Suspended sediments/surface water partition coefficient
+  real :: BD            ! Soil Bulk Density (g soil/cm3 soil)
+  real :: thetasw       ! Soil volumetric content (ml water/cm3 soil)
 
   real :: temp_l,temp_m
 
@@ -204,7 +204,7 @@ end subroutine le_calculate
 
 subroutine fwc_calculate(Fwc,Kdsw,TSS,dwc,dz,thetabs,Kdbs,Cbs,dbs)
 
-  real :: Fwc
+  real :: Fwc           ! 
   real :: Kdsw
   real :: TSS
   real :: dwc
