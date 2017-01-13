@@ -204,8 +204,8 @@ end subroutine le_calculate
 
 subroutine fwc_calculate(Fwc,Kdsw,TSS,dwc,dz,thetabs,Kdbs,Cbs,dbs)
 
-  real :: Fwc           ! 
-  real :: Kdsw
+  real :: Fwc           ! Fraction of Total Water Body Hg Concentration in Water Column 
+  real :: Kdsw          ! Suspended sediments/Surface Water Partition Coefficient
   real :: TSS
   real :: dwc
   real :: dz
