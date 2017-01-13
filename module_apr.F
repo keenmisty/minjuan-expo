@@ -109,14 +109,14 @@ end subroutine ksr_calculate
 
 subroutine kse_calculate(kse,xe,sd,er,bd,zs,kds,thetasw)
 
-  real :: kse
-  real :: xe
-  real :: sd
-  real :: er
-  real :: bd
-  real :: zs
-  real :: kds
-  real :: thetasw
+  real :: kse           ! Soil Hg loss constant (year-1)
+  real :: xe            ! 
+  real :: sd            !
+  real :: er            !
+  real :: bd            ! Soil bulk density (g soil/cm3 soil)
+  real :: zs            ! Soil mixing zone depth (cm)
+  real :: kds           ! Suspended sediments/surface water partition coefficient
+  real :: thetasw       ! Soil volumetric content (ml water/cm3 soil)
 
   real :: temp_h,temp_i
 
@@ -132,9 +132,9 @@ end subroutine kse_calculate
 
 subroutine ldep_calculate(ldep,dtot,aw)
 
-  real :: ldep
-  real :: dtot
-  real :: aw
+  real :: ldep          ! Deposition Load (g/year)
+  real :: dtot          ! Yearly total deposition(ug/m2/year)
+  real :: aw            ! Water Body Surface (m2)
 
   ldep = dtot * aw * 1e-6
 
@@ -144,9 +144,9 @@ end subroutine ldep_calculate
 
 subroutine li_calculate(li,dtot,ai)
 
-  real :: li
-  real :: dtot
-  real :: ai
+  real :: li            ! Runoff load from pervious surface (g/year)
+  real :: dtot          ! Yearly total deposition (ug/m2/year)
+  real :: ai            ! Impervious watershed area (m2)
 
   li   = dtot * ai * 1e-6
 
