@@ -110,9 +110,11 @@ end subroutine ksr_calculate
 subroutine kse_calculate(kse,xe,sd,er,bd,zs,kds,thetasw)
 
   real :: kse           ! Soil Hg loss constant (year-1)
-  real :: xe            ! 
-  real :: sd            !
-  real :: er            !
+  real :: Xe            ! Unit soil loss (kg/m 2 -year -1)
+  real :: AL            ! Total Watershed Area (m2)
+  real :: AI            ! Impervious Watershed Area (m2)
+  real :: SD            ! Sediment delivery ratio (watershed)
+  real :: ER            ! Soil enrichment ratio
   real :: bd            ! Soil bulk density (g soil/cm3 soil)
   real :: zs            ! Soil mixing zone depth (cm)
   real :: kds           ! Suspended sediments/surface water partition coefficient
