@@ -66,7 +66,7 @@ subroutine ksv_calculate(ksv,h,zs,kds,r,ta,bd,da,rou_soil,thetasw)
   real :: zs            ! Soil mixing zone depth (cm)
   real :: kds           ! Suspended sediments/surface water partition coefficient
   real :: r             ! Universal gas temperture
-  real :: ta            ! ?
+  real :: ta            ! Surface ambient air temperature (K)
   real :: bd            ! Soil bulk density (g soil/cm3 soil)
   real :: da            ! Diffuvity of COPC in air (cm2/s)
   real :: rou_soil      ! Soilds particle density (g/cm3)
