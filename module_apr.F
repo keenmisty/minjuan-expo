@@ -206,13 +206,13 @@ subroutine fwc_calculate(Fwc,Kdsw,TSS,dwc,dz,thetabs,Kdbs,Cbs,dbs)
 
   real :: Fwc           ! Fraction of Total Water Body Hg Concentration in Water Column 
   real :: Kdsw          ! Suspended sediments/Surface Water Partition Coefficient
-  real :: TSS
-  real :: dwc
-  real :: dz
-  real :: thetabs
-  real :: Kdbs
-  real :: Cbs
-  real :: dbs
+  real :: TSS           ! Total Suspended Solids Concentration (mg/L)
+  real :: dwc           ! Depth of Water Column (m)
+  real :: dz            ! Total Water Body Depth (m)
+  real :: thetabs       ! Bed sediment porosity (l water/l sediment)
+  real :: Kdbs   ! Bed sediments/sediment pore water partition coefficient (l water/kg bottom sediment)
+  real :: Cbs           ! Bed sediment concentration (g/cm 3)
+  real :: dbs           ! Depth of upper benthic sediment layer (m)
 
   real :: temp_n,temp_o
 
