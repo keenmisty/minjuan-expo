@@ -120,7 +120,7 @@ subroutine kse_calculate(kse,Xe,SD,ER,bd,zs,kds,thetasw)
 
   real :: temp_h,temp_i
 
-  temp_h = 0.1 * xe * sd * er / (bd * zs)
+  temp_h = 0.1 * Xe * SD * ER / (bd * zs)
 
   temp_i = kds * bd / (kds * bd + thetasw)
 
