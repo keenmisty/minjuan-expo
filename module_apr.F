@@ -157,7 +157,7 @@ end subroutine li_calculate
 subroutine lr_calculate(lr,ro,al,ai,cs,bd,thetasw,kds)
   
   real :: lr            ! Runoff load from previous surface (g/year)
-  real :: ro            ! 
+  real :: ro            ! Average annual surface runoff (cm/year) 
   real :: al            ! Total Watershed Area (m2)
   real :: ai            ! Impervious Watershed Area (m2)
   real :: cs            ! Soil Concentration due to Deposition (mg/kg)
@@ -180,11 +180,11 @@ end subroutine lr_calculate
 subroutine le_calculate(le,xe,al,ai,sd,er,cs,kds,bd,thetasw)
 
   real :: Le            ! Soil Erosion Load (g/year)
-  real :: Xe            ! 
+  real :: Xe            ! Unit soil loss (kg/m 2 -year -1)
   real :: AL            ! Total Watershed Area (m2)
   real :: AI            ! Impervious Watershed Area (m2)
-  real :: SD            ! 
-  real :: ER            ! 
+  real :: SD            ! Sediment delivery ratio (watershed)  
+  real :: ER            ! Soil enrichment ratio
   real :: Cs            ! Soil Concentration due to Deposition (mg/kg)
   real :: Kds           ! Suspended sediments/surface water partition coefficient
   real :: BD            ! Soil Bulk Density (g soil/cm3 soil)
