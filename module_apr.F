@@ -89,7 +89,7 @@ end subroutine ksv_calculate
 subroutine ksr_calculate(ksr,ro,thetasw,zs,kds,bd)
 
   real :: ksr           ! Soil Hg loss constant (year-1)
-  real :: ro            ! ro?
+  real :: ro            ! Average annual surface runoff (cm/year)
   real :: thetasw       ! Soil volumetric content (ml water/cm3 soil)
   real :: zs            ! Soil mixing zone depth (cm)
   real :: kds           ! Suspended sediments/surface water partition coefficient
@@ -211,7 +211,7 @@ subroutine fwc_calculate(Fwc,Kdsw,TSS,dwc,dz,thetabs,Kdbs,Cbs,dbs)
   real :: dz            ! Total Water Body Depth (m)
   real :: thetabs       ! Bed sediment porosity (l water/l sediment)
   real :: Kdbs   ! Bed sediments/sediment pore water partition coefficient (l water/kg bottom sediment)
-  real :: Cbs           ! Bed sediment concentration (g/cm 3)
+  real :: Cbs           ! Bed sediment concentration (g/cm3)
   real :: dbs           ! Depth of upper benthic sediment layer (m)
 
   real :: temp_n,temp_o
@@ -228,16 +228,16 @@ end subroutine fwc_calculate
 
 subroutine kwt_calculate(kwt,Fwc,Xe,AL,SD,Vfx,TSS,Aw,Cbs,dbs)
 
-  real :: kwt
-  real :: Fwc
-  real :: Xe
-  real :: AL
-  real :: SD
-  real :: Vfx
-  real :: TSS
-  real :: Aw
-  real :: Cbs
-  real :: dbs
+  real :: kwt           ! Overall total water body Hg dissipation rate constant (year-1)
+  real :: Fwc           ! Fraction of total water body Hg concentration in water column
+  real :: Xe            ! Unit soil loss (kg/m2-year-1)
+  real :: AL            ! Total Watershed Area (m2)
+  real :: SD            ! Sediment delivery ratio (watershed)
+  real :: Vfx           ! Average volume metric flow rate through water body (m3/year)
+  real :: TSS           ! Total suspended solids concentration (mg/l)
+  real :: Aw            ! Water body surface (m2)
+  real :: Cbs           ! Bed sediment concentration (g/cm3)
+  real :: dbs           ! Depth of upper benthic sediment layer (m)
 
   real :: temp_p,temp_q,temp_r
 
