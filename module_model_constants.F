@@ -12,7 +12,7 @@ MODULE module_model_constants
 
    REAL    , PARAMETER :: g = 9.81  ! acceleration due to gravity (m {s}^-2)
 
-#if ( NMM_CORE == 1 )
+#if 
       REAL    , PARAMETER :: r_d          = 287.04
       REAL    , PARAMETER :: cp           = 1004.6
 #else
