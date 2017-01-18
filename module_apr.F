@@ -255,9 +255,9 @@ end subroutine kwt_calculate
 
 subroutine vfx_calculate(Vfx,Aw,RO)
 
-  real :: Vfx
-  real :: Aw
-  real :: RO
+  real :: Vfx           ! Average volume metric flow rate through water body (m3/year)
+  real :: Aw            ! Water body surface (m2)
+  real :: RO            ! Average annual surface runoff (cm/year)
 
   Vfx = Aw * RO / 100
 
