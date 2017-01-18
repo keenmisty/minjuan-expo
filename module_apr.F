@@ -267,9 +267,9 @@ end subroutine vfx_calculate
 
 subroutine rp_calculate(Rp,gamma_j,Yp)
 
-  real :: Rp
-  real :: gamma_j
-  real :: Yp
+  real :: Rp            ! Interception fraction 
+  real :: gamma_j       ! Empirical constants
+  real :: Yp            ! Standing biomass of plants (kg/m2)
 
   real :: temp_s
 
