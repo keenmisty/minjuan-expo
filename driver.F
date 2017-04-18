@@ -59,4 +59,6 @@ program driver
 
   print "hello world"
 
+ ! call init 
+
 end program driver
