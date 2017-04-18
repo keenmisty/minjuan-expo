@@ -61,4 +61,12 @@ program driver
 
  ! call init 
 
+ ! going to cshg calculate
+ 
+ call cshg_calculate(cshg,dtot,ks,t,zs,bd)
+
+
+
+
+
 end program driver
