@@ -20,6 +20,10 @@ MODULE module_model_constants
       REAL    , PARAMETER :: cp           = 7.*r_d/2.
 #endif
 
+      REAL    , PARAMETER :: dyd          = 56.56 !yearly dry depostion(ug/m2/yr)
+      REAL    , PARAMETER :: dyw          = 124.1 !yearly wet deposition(ug/m2/yr)
+      REAL    , PARAMETER :: dtot         = 180.66!yearly total dep.(ug/m2/yr)
+      REAL    , PARAMETER :: P            = 178.14!average annual precipitation
 
 
 CONTAINS
