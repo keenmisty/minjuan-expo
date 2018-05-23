@@ -24,6 +24,12 @@ MODULE module_model_constants
       REAL    , PARAMETER :: dyw          = 124.1 !yearly wet deposition(ug/m2/yr)
       REAL    , PARAMETER :: dtot         = 180.66!yearly total dep.(ug/m2/yr)
       REAL    , PARAMETER :: P            = 178.14!average annual precipitation
+      REAL    , PARAMETER :: ev           = 162.65!average annual evap.(cm/yr)
+      REAL    , PARAMETER :: ta           = 301.5 !surface ambient air T (K)
+      REAL    , PARAMETER :: I            = 117.11!average annual irrigation
+      REAL    , PARAMETER :: ro           = 98.3  !average annual surface runoff
+
+      REAL    , PARAMETER :: thetabs      = 0.6
 
 
 CONTAINS
