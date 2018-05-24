@@ -30,6 +30,21 @@ MODULE module_model_constants
       REAL    , PARAMETER :: ro           = 98.3  !average annual surface runoff
 
       REAL    , PARAMETER :: thetabs      = 0.6
+      REAL    , PARAMETER :: cbs          = 1
+      REAL    , PARAMETER :: tss          = 10
+	  
+      REAL    , PARAMETER :: xe           = 100
+      REAL    , PARAMETER :: sd           = 0.2
+      REAL    , PARAMETER :: er           = 2
+      REAL    , PARAMETER :: dbs          = 0.02
+      REAL    , PARAMETER :: dwe          = 11.6
+      REAL    , PARAMETER :: dz           = 11.62
+	  
+      REAL    , PARAMETER :: zs           = 17.91
+	  REAL    , PARAMETER :: thetasw      = 0.2
+	  REAL    , PARAMETER :: bd           = 1.37
+	  REAL    , PARAMETER :: rousoil      = 2.7
+	  
 
 
 CONTAINS
